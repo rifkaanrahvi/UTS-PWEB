@@ -49,56 +49,131 @@ table {
 
 /*Style*/
 
+@font-face {
+    font-family: 'muli';
+    src: url(../MyWebsite/Font/muli-semibold-webfont.woff) format('woff');
+} 
+
 body{
-    font:16px/28px arial, sans-serif;
-    background-color: #eaeaea;
+    font: 18px/36px "muli", "Arial Narrow", arial, sans-serif; 
+    background-color: white;
     color: #333;
     background-image: url();
-    
 }
 
 .container {
-   margin: auto;
-   background-color:white;
+    width: 960px;
+    margin:auto;
+    background-color:whitesmoke;
+ }
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    padding: 28px;
+    margin-top: 20px;
+    margin-right: 10px;
+    align-items: center;
+    top: 0px;
+    width: 950px;
+    z-index: 9999;
+    background-color: antiquewhite;
 }
 
-.header {
-    padding: 20px;
-    padding-bottom: 10px;
+navbar.ul {
+    display: flex;
+    list-style-type: none;
+    width: 40%;
 }
 
-.header .judul{
-    font-size: 40px;
+.navbar .judul{
+    font-size: 30px;
     font-weight: bold;
+    font-family: 'Pacifico', cursive;
 }
 
-.header ul li {
+.navbar ul li {
     display: inline-block;
-    margin-top: 25px;
-    margin-right: 15px;
+    margin-top: 10px;
+    margin-right: 10px;
 }
 
-.header a {
+.navbar a {
     text-decoration: none;
     color:black;
-    padding: 3px;
+    padding: 1px;
 }
 
-.header a:hover {
-    background-color: lightblue;
+.navbar a:hover {
+    background-color: lightcoral;
     color: white;
 }
 
-.hero { 
-    height: 320px;
-    background-image: url(gambar/hero2.jpg);
-    background-size: cover;
-    background-position: 0 -500px;
-    border-bottom: 5px solid lightblue;
-    border-top: 5px solid lightcoral;
+/* Resonsif Breakpoint*/
 
+/* Ukuran Tablet*/
+@media screen and (max-width: 768px) {
+    navbar ul {
+        width: 50%;
+    }
 }
 
+/* Ukuran mobile*/
+@media screen and (max-width: 576px) {
+    navbar ul {
+        display: none;
+    }
+}
+
+.hero { 
+    height: 0px;
+    background-size: cover;
+    background-position: 0 -500px;
+    border-top: 5px solid lightcoral;
+}
+
+.banner {
+    background-color: bisque;
+    height: 600px;
+    text-align: center;
+    margin-bottom: 200px;
+}
+
+.banner img{
+    border-radius: 50%;
+    height: 250px;
+    border: 6px solid whitesmoke;
+    margin-top: 50px;
+}
+
+.banner h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.banner button {
+    margin-top: 50px;
+    padding: 4px;
+    width: 300px;
+    border-radius: 50px;
+    border: none;
+    font: 18px/36px "muli", "Arial Narrow", arial, sans-serif; 
+}
+
+.banner button:hover {
+    background-color: burlywood;
+    border: 1px solid white;
+}
+
+h1 span::before {
+    content:'';
+    animation: gerak infinite 8sc ease;
+    transform: translateY(-50%);
+    color: burlywood;
+    font-family: 70px;
+}
 .main {
     width: 600px;
     padding: 20px;
@@ -111,47 +186,8 @@ body{
     font-weight: bold;
 }
 
-.main .Penulis  {
-    font-size: 11px;
-    margin-top: -5px;
-}
 
-.main Penulis a {
-    color: black;
-    text-decoration: none;
-}
-
-.main p {
-    margin-bottom: 20px;
-    font-size: 15px;
-    text-align: justify;
-}
-
-/*sidebar*/
-.sidebar {
-    width: 300px;
-    float: right;
-    padding: 20px;
-}
-
-.sidebar h3 {
-    font-weight: bold;
-    color: #666;
-    text-align: justify;
-}
-
-.sidebar img {
-    width: 80px;
-    height: 80px;
-    float: left;
-    padding-right: 10px;
-}
-
-.sidebar p {
-    font: 12px/18px arial;
-    text-align: justify;
-}
-
+/* Footer*/
 .footer {
     background-color: #333;
     padding: 10px;
